@@ -16,8 +16,8 @@ function Model() {
     img: yellowImg,
   });
 
-  const cameraControllSmall = useRef();
-  const cameraControllLarge = useRef();
+  const cameraControlSmall = useRef();
+  const cameraControlLarge = useRef();
 
   const small = useRef(new THREE.Group());
   const large = useRef(new THREE.Group());
@@ -48,8 +48,8 @@ function Model() {
             <ModelView
               index={1}
               groupRef={small}
-              controlRef={cameraControllSmall}
               gsapType="view1"
+              controlRef={cameraControlSmall}
               setRotationState={setSmallRotation}
               item={model}
               size={size}
@@ -57,23 +57,24 @@ function Model() {
             <ModelView
               index={2}
               groupRef={large}
-              controlRef={cameraControllLarge}
               gsapType="view2"
+              controlRef={cameraControlLarge}
               setRotationState={setLargeRotation}
               item={model}
               size={size}
             />
+
             <Canvas
               className="w-full h-full"
               style={{
                 position: "fixed",
                 top: 0,
-                left: 0,
                 bottom: 0,
+                left: 0,
                 right: 0,
                 overflow: "hidden",
               }}
-              eventSource={document.getElementById("#root")}
+              eventSource={document.getElementById("root")}
             >
               <View.Port />
             </Canvas>
