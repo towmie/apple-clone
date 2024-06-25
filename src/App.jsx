@@ -1,4 +1,5 @@
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import HowItWorks from "./components/HowItWorks";
@@ -10,10 +11,11 @@ function App() {
     <main className="bg-black">
       <Navbar />
       <Hero />
-      {/* <Highlights /> */}
+      <Highlights />
       <Model />
       <Features />
       <HowItWorks />
+      <Footer />
     </main>
   );
 }
