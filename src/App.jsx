@@ -1,3 +1,4 @@
+import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import Model from "./components/Model";
@@ -8,8 +9,9 @@ function App() {
     <main className="bg-black">
       <Navbar />
       <Hero />
-      <Highlights />
+      {/* <Highlights /> */}
       <Model />
+      <Features />
     </main>
   );
 }
